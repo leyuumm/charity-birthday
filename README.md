@@ -15,7 +15,7 @@ A special interactive birthday website created with love for Charity's 22nd birt
 
 ## 🚀 Live Demo
 
-Visit: [[Your GitHub Pages URL will be here](https://leyuumm.github.io/charity-birthday/)]
+Visit: [[Click here!](https://leyuumm.github.io/charity-birthday/)]
 
 ## 💖 Made with Love
 
