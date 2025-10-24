@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Charity! 🌸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Countdown Screen -->
+    <div id="countdownScreen" class="countdown-screen">
+        <div class="countdown-container">
+            <h1 class="countdown-title">🎉 Charity's Birthday Countdown 🎉</h1>
+            <p class="countdown-subtitle">Get ready for your special day! 🌸</p>
+            <div class="countdown-display">
+                <div class="time-unit">
+                    <span class="time-value" id="hours">00</span>
+                    <span class="time-label">Hours</span>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-unit">
+                    <span class="time-value" id="minutes">00</span>
+                    <span class="time-label">Minutes</span>
+                </div>
+                <div class="time-separator">:</div>
+                <div class="time-unit">
+                    <span class="time-value" id="seconds">00</span>
+                    <span class="time-label">Seconds</span>
+                </div>
+            </div>
+            <p class="countdown-message">Until October 25, 2025 at 12:00 AM 💖</p>
+        </div>
+    </div>
+
+    <!-- Password Lock Screen -->
+    <div id="lockScreen" class="lock-screen hidden">
+        <div class="lock-container">
+            <h1 class="lock-title">🎂 Surprise Birthday! 🎂</h1>
+            <p class="lock-subtitle">Guess the special number to unlock...</p>
+            <div class="hint-container">
+                <p class="hint">💡 Hint: How many beautiful carnations were in your bouquet last Wednesday? (Close to 11 hehe)</p>
+            </div>
+            <input type="number" id="passwordInput" class="password-input" placeholder="Enter the magic number" maxlength="2">
+            <button onclick="checkPassword()" class="unlock-btn">Unlock the Surprise 🎁</button>
+            <p id="errorMsg" class="error-msg"></p>
+        </div>
+    </div>
+
+    <!-- Main Birthday Content -->
+    <div id="mainContent" class="main-content hidden">
+        <!-- Floating Hearts -->
+        <div class="hearts-container" id="heartsContainer"></div>
+        
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title animate-fade-in">Happy Birthday, Boss Charity! 🌸</h1>
+            <p class="subtitle animate-fade-in-delay">Today is all about you! ✨</p>
+        </header>
+
+        <!-- Bouquet Section -->
+        <section class="bouquet-section">
+            <div class="bouquet-container">
+                <h2 class="section-title">Your Beautiful Carnation Bouquet 💐</h2>
+                <div class="bouquet-wrap">
+                    <img src="img/flowers.jpg" alt="Beautiful Carnation Bouquet" class="bouquet-image">
+                </div>
+                <button onclick="collectBouquet()" class="collect-btn" id="bouquetBtn">Click to Collect Your Bouquet! 🌸</button>
+            </div>
+        </section>
+
+        <!-- Interactive Game Section -->
+        <section class="game-section">
+            <div class="game-container">
+                <h2 class="section-title">Catch the Falling Flowers! 🌸</h2>
+                <p class="game-instruction">Move the basket to catch flowers. Get 22 to unlock your cake! 🎂</p>
+                <div class="game-stats">
+                    <span>Score: <span id="score">0</span></span>
+                    <span>Target: 22</span>
+                </div>
+                <div class="game-area" id="gameArea">
+                    <div class="basket" id="basket">🧺</div>
+                </div>
+                <button onclick="startGame()" class="game-btn" id="gameBtn">Start Game</button>
+            </div>
+        </section>
+
+        <!-- Cheesecake Section -->
+        <section class="cake-section hidden" id="cakeSection">
+            <div class="cake-container">
+                <h2 class="section-title">Your Favorite Strawberry Cheesecake! 🍰</h2>
+                <p class="section-description">Made with love, just for you!</p>
+                <div class="cheesecake">
+                    <div class="plate">
+                        <div class="cake-slice">
+                            <div class="cake-layer topping"></div>
+                            <div class="cake-layer cheese"></div>
+                            <div class="cake-layer crust"></div>
+                        </div>
+                        <div class="strawberries">
+                            <div class="strawberry strawberry-1">🍓</div>
+                            <div class="strawberry strawberry-2">🍓</div>
+                            <div class="strawberry strawberry-3">🍓</div>
+                        </div>
+                        <div class="birthday-text">Happy Birthday!</div>
+                    </div>
+                </div>
+                <button onclick="eatCake()" class="eat-btn" id="eatBtn">Take a Bite! 🍴</button>
+            </div>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section class="letter-section hidden" id="letterSection">
+            <div class="letter-container">
+                <div class="envelope" onclick="openEnvelope()">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body"></div>
+                    <div class="click-hint">Click to open 💌</div>
+                </div>
+                <div class="letter hidden" id="letter">
+                    <h2>To My Dearest Charity,</h2>
+                    <p>Today is YOUR special day, and I wanted to make it as unique and beautiful as you are! 🌸</p>
+                    <p>Just like those carnation flowers represent something special, every moment with you is precious and unforgettable.</p>
+                    <p>I hope this surprise brings a smile to your face and makes your birthday even more memorable!</p>
+                    <p>Wishing you all the happiness, love, and strawberry cheesecake in the world HAHAHA! 🍰💕</p>
+                    <p class="signature">With all my love,<br>-lkm</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fireworks Section -->
+        <section class="fireworks-section hidden" id="fireworksSection">
+            <h2 class="section-title">Happy Birthday, Charity! 🎉</h2>
+            <button onclick="launchFireworks()" class="fireworks-btn">Light Up the Sky! 🎆</button>
+            <canvas id="fireworksCanvas"></canvas>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Made with love for the most amazing person</p>
+            <p>Happy Birthday, Boss! 🎂✨</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
