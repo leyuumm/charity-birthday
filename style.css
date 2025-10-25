@@ -1201,7 +1201,7 @@ section {
 @media screen and (max-width: 428px) {
     /* Countdown Screen */
     .countdown-container {
-        padding: 30px 20px;
+        padding: 30px 20px; 
     }
     
     .countdown-title {
@@ -1281,11 +1281,18 @@ section {
     .bouquet-image {
         width: 300px;
     }
-    
+
+    .bouquet-section {
+        margin-right: 85px;
+    }
+
     /* Game */
     .game-area {
         height: 300px;
         max-width: 350px;
+    }
+    .game-section {
+        margin-right: 85px;
     }
     
     .basket {
@@ -1304,6 +1311,11 @@ section {
     /* Cake */
     .plate {
         width: 220px;
+        right: 10px;
+    }
+
+    .cake-section {
+        margin-right: 85px;
     }
     
     /* Letter */
@@ -1325,7 +1337,11 @@ section {
         border-right: 125px solid transparent;
         border-top: 85px solid #ffb6c1;
     }
-    
+
+    .envelope-body {
+       margin-right: 10px;
+    }
+
     /* Fireworks */
     #fireworksCanvas {
         height: 400px;
@@ -1342,6 +1358,10 @@ section {
     .fireworks-btn {
         padding: 15px 35px;
         font-size: 1.2em;
+    }
+
+    .fireworks-section {
+        margin-right: 85px;
     }
 }
 
